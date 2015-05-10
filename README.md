@@ -6,4 +6,4 @@ A to-do list that self-destructs after 7 days
 
 ## Created by
 
-Rachel Lin
+Rachel Lin and Tyler Ferraro
