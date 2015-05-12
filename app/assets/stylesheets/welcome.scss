@@ -26,7 +26,7 @@ ul {
     margin: 0px;
 }
 
-ul li a, a:active, a:visited {
+ul li, li a, a:active, a:visited {
   font-family: Helvetica, arial, sans-serif;
   font-size: 15px !important;
   font-weight:bold !important;
@@ -53,3 +53,6 @@ ul li a:hover {
   margin-top:15px;
 }
 
+.alert {
+  margin-top: 15px;
+}
