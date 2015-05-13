@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'welcome/index'
+    resources :users, only: [:update, :show, :index]
 
-  get 'welcome/contact'
+
+  get 'contact' => 'welcome#contact'
 
   root to: 'welcome#index'
 
