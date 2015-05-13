@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+
   devise_for :users
-    resources :users, only: [:update, :show, :index]
+    resources :users, only: [:update, :show, :index] do
+      resources :items, only: [:create]
+    end
+
 
 
   get 'contact' => 'welcome#contact'
