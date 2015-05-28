@@ -1,0 +1,11 @@
+  <div class="media-body">
+    <small>
+
+      <%= item.days_left %>days left
+        | <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %>
+
+      <% end %>
+    </small>
+    <p><%= item.body %></p>
+  </div>
+  <% end %>
