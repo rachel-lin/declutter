@@ -1,11 +1,6 @@
-  <div class="media-body">
-    <small>
 
-      <%= item.days_left %>days left
-        | <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %>
+      
+      <p><%= Item.name %></p>
 
-      <% end %>
-    </small>
-    <p><%= item.body %></p>
-  </div>
-  <% end %>
+      <%= link_to "", @item, method: :delete, remote: true, class:'glyphicon glyphicon-ok', data: { confirm: 'Are you sure you want to delete this?'} %>
+

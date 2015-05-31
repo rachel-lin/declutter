@@ -43,7 +43,7 @@ ul li a:hover {
   border: none !important;
   cursor: crosshair !important;
   padding-left: 0 !important;
-  color: lime;
+  color: #b4155d;
   background-color: transparent !important;
 
 }
@@ -58,7 +58,7 @@ ul li a:hover {
 }
 
 
-.field input {
+.field input, input, button, select, textarea {
   border: 1px solid black;
   border-left: 5px solid black;
   outline:none;

@@ -5,12 +5,14 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.all
+    @user = User.find(params[:user_id])
+    @items = @user.items
   end
 
 
       def create
-      @item = Item.new(item_params)
+      @user = User.find(params[:user_id])
+      @item = @user.items.build(item_params)
         if @item.save
           flash[:notice] = "Item was saved."
           render @items
@@ -21,12 +23,21 @@ class ItemsController < ApplicationController
       end
 
 def destroy
-     @item = Item.find(params[:id])
+
+      @user = User.find(params[:user_id])
+      @item = @user.items.find(params[:id])
  
           if @item.destroy
             flash[:notice] = "Item was deleted."
-            render :index
+
+          else
+       flash[:error] = "There was an error deleting the item."
           end
+
+      respond_to do |format|
+       format.html
+       format.js
+     end
    end
 
 
