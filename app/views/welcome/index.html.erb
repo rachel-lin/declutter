@@ -1,2 +1,8 @@
 <h1>Declutter</h1>
 <p>A self-destructing to-do list</p>
+
+<h1>Your To-do list</h1>
+
+
+<%= render partial: 'items/items' %>
+<%= render partial: 'items/form', locals: { item: @user.items.new, user: @user } %>
