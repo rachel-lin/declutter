@@ -4,5 +4,5 @@
 <h1>Your To-do list</h1>
 
 
-<%= render partial: 'items/items' %>
+<%= render partial: 'items/items', locals: { items: @items } %>
 <%= render partial: 'items/form', locals: { item: @user.items.new, user: @user } %>

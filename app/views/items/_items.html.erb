@@ -1,7 +1,7 @@
 
 
 <ul>
-  <% @items.each do |item| %>
+  <% items.each do |item| %>
 <%= item.name %>
     <%= link_to " ", user_item_path(@user, item) , method: :delete, class: 'glyphicon glyphicon-ok glyph-right glyph-danger', data: { confirm: 'Are you sure you want to delete this?' } %> |  <%= pluralize(item.days_left, "day") %>
     <br />

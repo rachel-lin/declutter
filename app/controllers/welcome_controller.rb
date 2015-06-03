@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+    authenticate_user!
     @user = User.find(current_user)
     @items = @user.items
   end
