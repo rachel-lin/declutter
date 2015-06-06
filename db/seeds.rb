@@ -14,7 +14,7 @@ require 'faker'
   user = User.new(
     name:  Faker::Name.name,
     email: Faker::Internet.email,
-    password: Faker::Lorem.characters(10) 
+    password: "helloworld" 
     )
   user.skip_confirmation!
   user.save!
