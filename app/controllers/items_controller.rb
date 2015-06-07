@@ -21,12 +21,14 @@ def destroy
  
           if @item.destroy
             flash[:notice] = "Item was deleted."
-            redirect_to :root
           else
        flash[:error] = "There was an error deleting the item."
-          redirect_to :root
           end
 
+     respond_to do |format|
+       format.html
+       format.js
+     end
 
    end
 
