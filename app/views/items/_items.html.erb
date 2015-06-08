@@ -2,7 +2,7 @@
 <div class="list-items">
 <ul>
   <% items.each do |item| %>
-<li> <%= item.name %>
+<li id="item-<%= item.id %>"> <%= item.name %>
      |  <%= pluralize(item.days_left, "day") %> left  <%= link_to " ", user_item_path(@user, item) , method: :delete,  class: 'glyphicon glyphicon-trash', data: { confirm: 'Are you sure you want to delete this?' }, remote:  true %>
     <br />
     
