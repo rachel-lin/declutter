@@ -37,9 +37,9 @@
     <ul>
       <li><%= link_to "Declutter—", root_path %></li>
       <% if current_user %>
-    <li>Hello <%= link_to (current_user.email || current_user.name), edit_user_registration_path  %>!</li><li><%= link_to "Sign out", destroy_user_session_path, method: :delete %> / <%= link_to "New User", new_user_registration_path %></li>
+    <li>Hello <%= link_to (current_user.name || current_user.email), edit_user_registration_path  %>!</li><li><%= link_to "Sign out", destroy_user_session_path, method: :delete %> </li>
     <% else %>
-    <li><%= link_to "—Sign In", new_user_session_path %> or
+    <li><%= link_to "Sign In", new_user_session_path %> or
     <%= link_to "Sign Up", new_user_registration_path %></li>
     <% end %>
 
