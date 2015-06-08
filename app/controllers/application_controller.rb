@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   # overriding devise's default behaviour
     def after_sign_in_path_for(resource)
-        current_user
+        root_path
     end
  
    protected
